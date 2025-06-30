@@ -16,10 +16,9 @@ Features
 12. Export Mood Log as PDF: Users can export all of their logged moods to a pdf file.
 
 Technologies Used
-• Backend: Laravel 12.0
-• Database: MySQL
-• Frontend: HTML, Bootstrap 5, ChartJS
-• PDF Generation: barryvdh/laravel-dompdf
+1. Backend: Laravel 12.0
+2. Database: MySQL
+3. Frontend: HTML, Bootstrap 5, ChartJS4. PDF Generation: barryvdh/laravel-dompdf
 
 Setup Instructions
 
@@ -37,21 +36,21 @@ Setup Instructions
     Create jamtechnologiesassignment database in mysql workbench first.
     Open the .env file and update the database credentials:
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=jamtechnologiesassignment
-    DB_USERNAME=root
-    DB_PASSWORD=qwerty
+    1. DB_CONNECTION=mysql
+    2. DB_HOST=127.0.0.1
+    3. DB_PORT=3306
+    4. DB_DATABASE=jamtechnologiesassignment
+    5. DB_USERNAME=root
+    6. DB_PASSWORD=qwerty
 
 11. Run database migrations:
     php artisan migrate
 12. Install barryvdh/laravel-dompdf for PDF export:
-    composer require barryvdh/laravel-dompdf
-    php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider" --tag="config"
+    -> composer require barryvdh/laravel-dompdf
+    -> php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider" --tag="config"
     
 14. Start the Laravel development server:
-    php artisan serve
+    -> php artisan serve
 
 
 User Interface:
