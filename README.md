@@ -56,3 +56,11 @@ DB_PASSWORD=qwerty
 
 User Interface:
 ![Login_Page](https://github.com/stnmy/JamLaravelTask/blob/34b77cc0c6c35566da860ee744537a791aac4008/DailyMood/1.png)
+![Register_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/2.png)
+![Home_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/3.png)
+![Home2_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/4.png)
+![AddMood_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/5.png)
+![EditMood_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/6.png)
+![Delete_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/7.png)
+![Mobile_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/8.png)
+![Mobile2_Page](https://github.com/stnmy/JamLaravelTask/blob/318f527989f61f5ce83c4b7c59e31d29fe149150/DailyMood/9.png)
