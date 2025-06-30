@@ -1,6 +1,3 @@
-Here's the code for resources/views/moods/edit.blade.php. This view allows users to modify an existing mood entry, with
-the form pre-filled with the current data.
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +5,6 @@ the form pre-filled with the current data.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Mood - Daily Mood Tracker</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>

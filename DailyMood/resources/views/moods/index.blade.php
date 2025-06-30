@@ -91,23 +91,55 @@
             font-weight: bold;
         }
 
-        .badge-streak {
+        .badge-streak,
+        .badge-mood-of-month {
             background-color: #6f42c1;
             color: white;
             padding: 8px 12px;
             border-radius: 20px;
             font-size: 0.9em;
             margin-left: 10px;
+            margin-bottom: 5px;
+            white-space: nowrap;
         }
 
         .badge-mood-of-month {
             background-color: #17a2b8;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
             margin-right: 10px;
         }
+
+        .header-add-button {
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .header-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 767.98px) {
+            .header-items-container {
+                justify-content: flex-start;
+            }
+
+            .badge-streak,
+            .badge-mood-of-month,
+            .header-add-button {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px !important;
+            }
+
+            .header-add-button .btn {
+                width: 100%;
+            }
+        }
+
 
         .chart-container {
             position: relative;
@@ -153,9 +185,9 @@
     </nav>
 
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="mb-0">Mood History</h1>
-            <div class="d-flex align-items-center">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-md-row">
+            <h1 class="mb-0 mb-md-0">Mood History</h1>
+            <div class="header-items-container mt-3 mt-md-0">
                 @auth
                     @if (isset($moodOfTheMonth) && $moodOfTheMonth)
                         <span class="badge badge-mood-of-month">
@@ -171,7 +203,7 @@
                         </span>
                     @endif
                 @endauth
-                <a href="{{ route('moods.create') }}" class="btn btn-success ms-3 rounded-pill px-4">
+                <a href="{{ route('moods.create') }}" class="btn btn-success rounded-pill px-4 header-add-button">
                     <i class="fas fa-plus me-1"></i> Add New Mood
                 </a>
             </div>
@@ -191,15 +223,15 @@
             </div>
         @endif
         <div class="card mb-4">
-            <div class="card-header">Weekly Mood Summary (This Week:
-                {{ \Carbon\Carbon::today()->startOfWeek(\Carbon\Carbon::MONDAY)->format('M d') }} -
-                {{ \Carbon\Carbon::today()->endOfWeek(\Carbon\Carbon::SUNDAY)->format('M d') }})</div>
+            <div class="card-header">Weekly Mood Summary (Last Week:
+                {{ \Carbon\Carbon::today()->subWeek()->startOfWeek(\Carbon\Carbon::MONDAY)->format('M d') }} -
+                {{ \Carbon\Carbon::today()->subWeek()->endOfWeek(\Carbon\Carbon::SUNDAY)->format('M d') }})</div>
             <div class="card-body">
                 <div class="chart-container">
                     <canvas id="weeklyMoodChart"></canvas>
                 </div>
                 @if (empty(array_filter($weeklyMoodSummary)))
-                    <div class="alert alert-info text-center mt-3 mb-0">No mood entries logged this week.</div>
+                    <div class="alert alert-info text-center mt-3 mb-0">No mood entries logged last week.</div>
                 @endif
             </div>
         </div>
@@ -280,7 +312,6 @@
                                             class="btn btn-warning btn-sm btn-action me-2 rounded-pill mb-1">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
-                                        {{-- FIXED: Added data-bs-toggle and data-bs-target attributes --}}
                                         <button type="button" class="btn btn-danger btn-sm btn-action rounded-pill"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteMoodModal{{ $mood->id }}">
