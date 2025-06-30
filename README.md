@@ -49,6 +49,10 @@ DB_PASSWORD=qwerty
 12. Install barryvdh/laravel-dompdf for PDF export:
     composer require barryvdh/laravel-dompdf
     php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider" --tag="config"
-
-13. Start the Laravel development server:
+    
+14. Start the Laravel development server:
     php artisan serve
+
+
+User Interface:
+![Login_Page](https://github.com/stnmy/JamLaravelTask/blob/34b77cc0c6c35566da860ee744537a791aac4008/DailyMood/1.png)
